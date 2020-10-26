@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3232AB">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Details"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Details"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etId"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:hint="Order Amount"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etOrderType"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Order Type"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Amount data value equal to order amount"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etAmountDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:hint="AmountTypeDesc"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Amount"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Details"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"/>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_box"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                tools:ignore="Suspicious0dp">
+
+                <EditText
+                    android:id="@+id/etCustomerNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:textSize="14sp"
+                    android:hint="Customer Notes"
+                    android:textColor="#000000"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:background="@android:color/transparent"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="25"
+                        android:singleLine="true"
+                        android:hint="First Name"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="25"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Last Name"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etMobileNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:hint="Mobile Number"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="35"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Email"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_box"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                tools:ignore="Suspicious0dp">
+
+                <EditText
+                    android:id="@+id/etEmailReceipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:textSize="14sp"
+                    android:hint="Email Receipt"
+                    android:textColor="#000000"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:background="@android:color/transparent"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_box"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                tools:ignore="Suspicious0dp">
+
+                <EditText
+                    android:id="@+id/etBillingAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:textSize="14sp"
+                    android:hint="Billibg Address"
+                    android:textColor="#000000"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:background="@android:color/transparent"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etBillingCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:hint="Billing City"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etBillingState"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="35"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Billing State"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etBillingCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:hint="Billing Country"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etBillingZipCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="35"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Billing Zip Code"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etShippingFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:hint="Shippingn First Name"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etShippingLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="35"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Shipping Last Name"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_box"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                tools:ignore="Suspicious0dp">
+
+                <EditText
+                    android:id="@+id/etShippingAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:textSize="14sp"
+                    android:hint="Shipping Address"
+                    android:textColor="#000000"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionNext"
+                    android:background="@android:color/transparent"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etShippingCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:hint="Shippingn City"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etShippingState"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="35"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Shipping State"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etShippingCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:hint="Shipping Country"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etShippingZipCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="6"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Shipping Zip code"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etShippingMobileNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:hint="Shipping Mobile Number"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Integration Data"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="25"
+                        android:singleLine="true"
+                        android:hint="User Name"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etSource"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="25"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Source"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etIntegrationType"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="25"
+                        android:singleLine="true"
+                        android:hint="Integration Type"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etHashData"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="25"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Hash Data"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp" >
+
+                    <EditText
+                        android:id="@+id/etPlatformId"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="25"
+                        android:singleLine="true"
+                        android:hint="PlatformId"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edit_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="Suspicious0dp">
+
+                    <EditText
+                        android:id="@+id/etRequestTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:maxLength="25"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:hint="Request Date Time"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:imeOptions="actionNext"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlSubmit"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#3232AB"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>
