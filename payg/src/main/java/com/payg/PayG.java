@@ -17,7 +17,7 @@ import java.util.Random;
 
 import cz.msebera.android.httpclient.entity.StringEntity;
 
-public class PayG extends android.app.Activity {
+public class PayG extends Activity {
 
     private static String AuthenticationKey = "dcb3ef4d84254929a0e81f14c3ddefbf";
     /**
@@ -75,7 +75,7 @@ public class PayG extends android.app.Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        createOrder();
+        createOrder("7771","34dfsf345","24","https://a2zfame.com");
 
        /* List<String>orderAmountData = new ArrayList<>();
         orderAmountData.add(0,"AmountTypeDesc");
@@ -130,6 +130,8 @@ public class PayG extends android.app.Activity {
     }
 
     private void init() {
+
+
         etDetailsAmount    = findViewById(R.id.etDetailsAmount);
         etOrderType        = findViewById(R.id.etOrderType);
         etAmountDiscount   = findViewById(R.id.etAmountDiscount);
@@ -191,7 +193,7 @@ public class PayG extends android.app.Activity {
 //    }
 
 
-    public static void createOrder() {
+    public static void createOrder(String Merchantkeyid,String UniqueRequestId,String OrderAmount,String RedirectUrl) {
         /*jsonParams.put("Merchantkeyid", Merchantkeyid);
         jsonParams.put("UniqueRequestId", UniqueRequestId);
         jsonParams.put("OrderAmount", 10);
@@ -238,7 +240,6 @@ public class PayG extends android.app.Activity {
                 Log.d("Error", error.toString());
             }
         });
-
     }
 
 
