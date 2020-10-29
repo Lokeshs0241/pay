@@ -232,7 +232,6 @@ public class PayG extends Activity {
             @Override
             public void onResponse(int requestCode, String response) {
                 Log.d("RESPONSE", response.toString());
-
             }
 
             @Override
